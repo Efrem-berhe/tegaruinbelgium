@@ -1,0 +1,9 @@
+covid19_self_assessment.js:
+  version: 1.x
+  js:
+    js/covid19_SA.js: {}
+covid19_self_assessment.css:
+  version: 1.x
+  css:
+    theme:
+      css/covid19_SA.css: {}

@@ -1,0 +1,20 @@
+add covid19 self assessment entities:
+  title: 'Create new Covid19 self assessment entities'
+
+administer covid19 self assessment entities:
+  title: 'Administer Covid19 self assessment entities'
+  description: 'Allow to access the administration form to configure Covid19 self assessment entities.'
+  restrict access: true
+
+delete covid19 self assessment entities:
+  title: 'Delete Covid19 self assessment entities'
+
+edit covid19 self assessment entities:
+  title: 'Edit Covid19 self assessment entities'
+
+view published covid19 self assessment entities:
+  title: 'View published Covid19 self assessment entities'
+
+view unpublished covid19 self assessment entities:
+  title: 'View unpublished Covid19 self assessment entities'
+

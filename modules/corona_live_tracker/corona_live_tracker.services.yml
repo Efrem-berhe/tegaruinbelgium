@@ -1,0 +1,5 @@
+services:
+ corona_api:
+   class: Drupal\corona_live_tracker\CoronaApi
+   arguments:
+       - '@http_client_factory'

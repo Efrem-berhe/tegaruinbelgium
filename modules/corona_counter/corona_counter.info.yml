@@ -1,0 +1,12 @@
+name: 'Corona Counter'
+type: module
+description: 'This module provides statistics for COVID-19 inside blocks, with the ability to choose the desired country.'
+core: 8.x
+package: 'Custom'
+dependencies:
+  - block
+
+# Information added by Drupal.org packaging script on 2020-04-01
+version: '8.x-1.0'
+project: 'corona_counter'
+datestamp: 1585771471

@@ -1,0 +1,35 @@
+name: 'YG Charity'
+description: 'Perfect theme for NGO, Charity and Non-Profit organization.'
+# core: 8.x
+type: theme
+screenshot: Screenshot.png
+
+
+regions:
+  navigation: 'Navigation'
+  primary_menu: 'primary_menu'
+  logo: 'Logo'
+  highlighted: 'Highlighted'
+  title: 'Title'
+  slider: 'Testimonial Slider'
+  team: 'Team'
+  banner: 'Banner'
+  content: 'Content'
+  sidebar_first: 'Primary'
+  sidebar_second: 'Secondary'
+  footer: 'Footer about'
+  footer_address: 'Footer Address'
+  footer_subscribe: 'Footer Subscribe '
+  copyright: 'Copyright'
+  
+
+libraries:
+  - yg_charity/global-styling
+  
+
+
+# Information added by Drupal.org packaging script on 2018-03-17
+version: '8.x-1.0-alpha2'
+core: '8.x'
+project: 'yg_charity'
+datestamp: 1521274087

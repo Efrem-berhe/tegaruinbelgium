@@ -1,0 +1,77 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/admin\/content\/covid19_self_assessment\/1?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/covid19_self_assessment\/symptoms"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/covid19_self_assessment\/symptoms\/user_id": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json"
+            }
+        ]
+    },
+    "id": [
+        {
+            "value": 1
+        }
+    ],
+    "uuid": [
+        {
+            "value": "c0cc031a-8105-4825-96a1-fe06a4f7b4a2"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "symptoms"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/covid19_self_assessment\/symptoms\/user_id": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "c88d078a-51d1-4e00-b801-dc70620d84d9"
+                    }
+                ]
+            }
+        ]
+    },
+    "name": [
+        {
+            "value": "Dry cough"
+        }
+    ],
+    "created": [
+        {
+            "value": "2020-04-15T07:44:44+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2020-04-15T07:44:44+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ]
+}

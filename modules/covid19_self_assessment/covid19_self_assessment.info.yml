@@ -1,0 +1,12 @@
+name: 'COVID-19 Self Assessment'
+type: module
+description: 'Self Assessment for COVID-19 (Corona Virus)'
+core: 8.x
+configure: 'covid19_self_assessment.settings'
+dependencies:
+  - drupal:default_content
+
+# Information added by Drupal.org packaging script on 2020-04-17
+version: '1.0.0'
+project: 'covid19_self_assessment'
+datestamp: 1587129117

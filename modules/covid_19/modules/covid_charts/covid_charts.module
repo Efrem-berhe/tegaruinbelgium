@@ -1,0 +1,52 @@
+<?php
+
+/**
+ * @file
+ * Charts Api Example - Module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Component\Plugin\Exception\PluginNotFoundException;
+
+/**
+ * Implements hook_theme().
+ */
+function covid_charts_theme() {
+  return [
+    'covid_charts' => [
+      'template' => 'covid_charts',
+      'variables' => [
+        'library' => '',
+        'categories' => [],
+        'seriesData' => [],
+        'options' => [],
+        'id' => '',
+      ],
+    ],
+  ];
+}
+
+/**
+ * Implements template_preprocess_covid_charts().
+ */
+function template_preprocess_covid_charts(&$variables) {
+
+  // Charts override settings applied at this point.
+  $chartOverridePluginManager = \Drupal::service('plugin.manager.charts_override');
+  $plugin_definition = [];
+  $chartOverrideOptions = [];
+  try {
+    $plugin_definition = $chartOverridePluginManager->getDefinition($variables['library'] . '_overrides');
+    if (!empty($plugin_definition)) {
+      $chartOverridePlugin = $chartOverridePluginManager->createInstance($variables['library'] . '_overrides');
+      $chartOverrideOptions = $chartOverridePlugin->chartOverrides($variables['options']);
+    }
+  } catch (PluginNotFoundException $e) {
+    \Drupal::service('messenger')
+      ->addMessage(t('Exception...' . $e->getMessage()));
+  }
+
+  $plugin_manager = \Drupal::service('plugin.manager.charts');
+  $plugin = $plugin_manager->createInstance($variables['library']);
+  $plugin->buildVariables($variables['options'], $variables['categories'], $variables['seriesData'], [], $variables, $variables['id'], $chartOverrideOptions);
+}

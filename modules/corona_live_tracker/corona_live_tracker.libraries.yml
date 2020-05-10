@@ -1,0 +1,27 @@
+corona_live_tracker:
+  version: 1.x
+  js:
+    js/corona_live_tracker.js: {} 
+    js/core.js: {}
+    js/charts.js: {}
+    js/maps.js: {}
+    https://www.amcharts.com/lib/4/core.js: {type: external}
+    https://www.amcharts.com/lib/4/charts.js: {type: external}
+    https://www.amcharts.com/lib/4/maps.js: {type: external}
+    https://www.amcharts.com/lib/4/geodata/worldLow.js: {type: external } 
+    https://covid.amCharts.com/data/js/world_timeline.js: {type: external } 
+    https://covid.amCharts.com/data/js/total_timeline.js: {type: external } 
+    js/dark.js: {}
+    js/animated.js: {}
+    js/countries2.js: {}
+    //cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js: {type: external, attributes: { async: true }} 
+    js/app.js: {}
+  css:
+    theme:
+      css/custom_live_tracker.css : {}
+      css/dark.css : {}
+      //cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css: {type: external, minified: true}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings
+    

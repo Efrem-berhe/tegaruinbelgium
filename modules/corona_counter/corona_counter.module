@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * @file
+ * Contains corona_counter.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function corona_counter_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the corona_counter module.
+    case 'help.page.corona_counter':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('This module provides statistics for COVID-19 inside blocks, with the ability to choose the desired country.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function corona_counter_theme() {
+  return [
+    'corona_counter_block' => [
+      'variables' => [
+        'content' => NULL,
+      ],
+      'render element' => 'children',
+    ],
+  ];
+}

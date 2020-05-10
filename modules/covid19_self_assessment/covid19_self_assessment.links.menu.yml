@@ -1,0 +1,21 @@
+covid19_self_assessment.admin_settings:
+  title: 'Covid19 Self Assessment Config Form'
+  description: 'Configure risk messages.'
+  parent: system.admin_config_system
+  route_name: covid19_self_assessment.settings
+
+# Covid19 self assessment menu items definition
+entity.covid19_self_assessment.collection:
+  title: 'Covid19 self assessment list'
+  route_name: entity.covid19_self_assessment.collection
+  description: 'List Covid19 self assessment entities'
+  parent: system.admin_structure
+  weight: 100
+
+# Covid19 self assessment type menu items definition
+entity.covid19_self_assessment_type.collection:
+  title: 'Covid19 self assessment type'
+  route_name: entity.covid19_self_assessment_type.collection
+  description: 'List Covid19 self assessment type (bundles)'
+  parent: system.admin_structure
+  weight: 99

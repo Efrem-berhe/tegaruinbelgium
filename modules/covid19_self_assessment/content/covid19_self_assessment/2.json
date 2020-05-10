@@ -1,0 +1,77 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/admin\/content\/covid19_self_assessment\/2?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/covid19_self_assessment\/additional_symptoms"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/covid19_self_assessment\/additional_symptoms\/user_id": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json"
+            }
+        ]
+    },
+    "id": [
+        {
+            "value": 2
+        }
+    ],
+    "uuid": [
+        {
+            "value": "3634d2cc-8467-42ca-905c-788c0ef69c0c"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "additional_symptoms"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/covid19_self_assessment\/additional_symptoms\/user_id": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "c88d078a-51d1-4e00-b801-dc70620d84d9"
+                    }
+                ]
+            }
+        ]
+    },
+    "name": [
+        {
+            "value": "Moderate to Severe cough"
+        }
+    ],
+    "created": [
+        {
+            "value": "2020-04-15T08:36:13+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2020-04-15T08:36:13+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+global-styling:
+  css:
+    theme:
+      fonts/font-awesome/css/font-awesome.min.css: {}
+      css/bootstrap.css: {}
+      css/nivo-lightbox/default.css: {} 
+      css/nivo-lightbox/nivo-lightbox.css: {} 
+      css/owl.carousel.min.css: {} 
+      css/owl.theme.default.min.css: {} 
+      css/style.css: {} 
+      'https://fonts.googleapis.com/css?family=Open+Sans:400,600,700': { type: external, minified: true }
+      
+  js:
+    js/bootstrap.js: {}
+    js/nivo-lightbox.js: {}
+    js/script.js: {}
+    js/owl.carousel.js: {}
+  dependencies:
+    - core/jquery 
+    - core/drupalSettings
+    - core/modernizr
+    - core/drupal

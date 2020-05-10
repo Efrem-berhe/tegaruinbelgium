@@ -1,0 +1,24 @@
+<section id="about-team" class="text-center">
+<div class="container">
+    <div class="col-md-12 section-title">
+      <h2>Our Team</h2>
+      <div class="title-img"><img src="{{ url('<front>') }}/themes/yg_charity/images/line.gif" class="img-responsive" alt="title"></div>
+    </div>
+      <div class="row">
+        <div class="col-md-12 columns">
+          <div class="owl-carousel owl-theme">
+            {% for row in rows %}
+     {%
+       set row_classes = [
+         default_row_class ? 'views-row',
+       ]
+     %}
+     <div {{ row.attributes.addClass(row_classes) }}>
+       {{ row.content }}
+     </div>
+    {% endfor %}
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>

@@ -1,0 +1,26 @@
+covid19_self_assessment.covid19_s_a_form:
+  path: '/covid19-self-assessment'
+  defaults:
+    _form: '\Drupal\covid19_self_assessment\Form\Covid19SAForm'
+    _title: 'Covid19 Self Assessment'
+  requirements:
+    _access: 'TRUE'
+
+covid19_self_assessment.covid19_s_a_controller_result:
+  path: '/covid19-self-assessment/result'
+  defaults:
+    _controller: '\Drupal\covid19_self_assessment\Controller\Covid19SAController::covid19SaResult'
+    _title: 'Covid19 Self Assessment Result'
+  requirements:
+    _permission: 'access content'
+
+covid19_self_assessment.settings:
+  path: '/admin/config/covid19_self_assessment'
+  defaults:
+    _form: '\Drupal\covid19_self_assessment\Form\Covid19ConfigForm'
+    _title: 'Covid19 Self Assessment Config Form'
+  requirements:
+    _permission: 'access content'
+  options:
+    _admin_route: TRUE
+    no_cache: 'TRUE'

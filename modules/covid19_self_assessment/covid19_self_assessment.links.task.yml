@@ -1,0 +1,17 @@
+# Covid19 self assessment routing definition
+
+entity.covid19_self_assessment.canonical:
+  route_name: entity.covid19_self_assessment.canonical
+  base_route: entity.covid19_self_assessment.canonical
+  title: 'View'
+
+entity.covid19_self_assessment.edit_form:
+  route_name: entity.covid19_self_assessment.edit_form
+  base_route: entity.covid19_self_assessment.canonical
+  title: 'Edit'
+
+entity.covid19_self_assessment.delete_form:
+  route_name:  entity.covid19_self_assessment.delete_form
+  base_route:  entity.covid19_self_assessment.canonical
+  title: Delete
+  weight: 10

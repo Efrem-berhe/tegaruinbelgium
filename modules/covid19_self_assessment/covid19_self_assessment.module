@@ -1,0 +1,47 @@
+<?php
+
+/**
+ * @file
+ * Contains covid19_self_assessment.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_help().
+ */
+function covid19_self_assessment_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the covid19_self_assessment module.
+    case 'help.page.covid19_self_assessment':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Self Assessment for COVID-19 (Corona Virus)') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function covid19_self_assessment_theme() {
+  return [
+    'covid19_self_assess' => [
+      'variables' => [
+        'risk' => NULL,
+        'risk_message' => NULL,
+      ],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function covid19_self_assessment_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $form['#attached']['library'][] = 'covid19_self_assessment/covid19_self_assessment.js';
+  return $form;
+}

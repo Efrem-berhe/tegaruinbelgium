@@ -1,0 +1,12 @@
+name: Covid
+type: module
+description: This module is created for providing information related to Corona virus updates.
+core: 8.x
+dependencies:
+  - 'charts:charts'
+  - 'charts:charts_google'
+
+# Information added by Drupal.org packaging script on 2020-04-07
+version: '8.x-1.x-dev'
+project: 'covid_19'
+datestamp: 1586250816

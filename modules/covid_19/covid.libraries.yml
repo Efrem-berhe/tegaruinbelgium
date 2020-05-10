@@ -1,0 +1,6 @@
+covid_js:
+  version: VERSION
+  js:
+    js/covid_charts.js: {}
+  dependencies:
+    - charts_google/charts_google

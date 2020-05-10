@@ -1,0 +1,4 @@
+block_style:
+  css:
+    theme:
+      assets/css/style.css: {}

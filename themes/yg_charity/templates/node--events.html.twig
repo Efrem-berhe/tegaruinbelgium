@@ -1,0 +1,17 @@
+<section id="event-detail">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <div class="event-detail">
+          <div class="event-detail-img"><img src="{{content.field_image.0}}" class="img-responsive" alt="causes"></div>
+          <div class="event-detail-body">
+            <h3>{{ node.title.value }}</h3>
+            <div class="event-detail-title-img"><img src="{{ url('<front>') }}/themes/yg_charity/images/line.gif" class="img-responsive" alt="title"></div>
+            <p class="text-center"><span ><i class="fa fa-calendar"></i>{{content.field_date.0}}</span><span><i class="fa fa-map-marker"></i>{{content.field_location_name.0}}</span></p>
+            <p>{{content.body}}</p>
+          </div>
+       </div>
+      </div>
+    </div>
+  </div>
+</section>

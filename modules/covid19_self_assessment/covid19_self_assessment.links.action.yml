@@ -1,0 +1,10 @@
+entity.covid19_self_assessment.add_form:
+  route_name: entity.covid19_self_assessment.add_page
+  title: 'Add Covid19 self assessment'
+  appears_on:
+    - entity.covid19_self_assessment.collection
+entity.covid19_self_assessment_type.add_form:
+  route_name: entity.covid19_self_assessment_type.add_form
+  title: 'Add Covid19 self assessment entity type (bundle)'
+  appears_on:
+    - entity.covid19_self_assessment_type.collection

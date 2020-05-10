@@ -1,0 +1,16 @@
+{
+    "name": "covid19_self_assessment",
+    "type": "drupal-module",
+    "description": "Self Assessment for COVID-19 (Corona Virus)",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/covid19_self_assessment",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/covid19_self_assessment",
+        "source": "http://cgit.drupalcode.org/covid19_self_assessment",
+    },
+    "require": {
+        "drupal/default_content": ">=1.0"
+    }
+}

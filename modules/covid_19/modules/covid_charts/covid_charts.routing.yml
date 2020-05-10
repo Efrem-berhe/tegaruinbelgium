@@ -1,0 +1,7 @@
+covid_charts.display:
+  path: /covid/reports
+  defaults:
+    _controller: '\Drupal\covid_charts\Controller\CovidVisualization::display'
+    _title: 'Covid Visualization'
+  requirements:
+    _permission: 'access content'

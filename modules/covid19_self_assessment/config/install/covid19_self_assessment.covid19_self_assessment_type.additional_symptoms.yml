@@ -1,0 +1,6 @@
+uuid: d10fe4d2-2bf3-443f-8249-beea8c26bad4
+langcode: en
+status: true
+dependencies: {  }
+id: additional_symptoms
+label: 'Additional symptoms'

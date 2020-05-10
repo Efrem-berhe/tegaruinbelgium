@@ -1,0 +1,17 @@
+<section id="testimonial">
+   <div class="container">
+      <div class="row">
+      <div class="col-md-12 section-title text-center">
+        <h2>Testimonial</h2>
+        <div class="title-img"><img src="{{ url('<front>') }}/themes/yg_charity/images/line.gif" class="img-responsive" alt="title"></div>
+      </div>
+        <div class="col-md-12">
+          <div class="owl-carousel owl-theme">
+            {% for row in rows %}
+            {{ row.content }}
+    {% endfor %}
+            </div>
+        </div>
+      </div>
+    </div>
+</section>

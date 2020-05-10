@@ -1,0 +1,77 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/admin\/content\/covid19_self_assessment\/16?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/covid19_self_assessment\/pre_existing_diseases"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/covid19_self_assessment\/pre_existing_diseases\/user_id": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json"
+            }
+        ]
+    },
+    "id": [
+        {
+            "value": 16
+        }
+    ],
+    "uuid": [
+        {
+            "value": "d78efd82-ac55-4fee-83ac-a7ccd4d464d4"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "pre_existing_diseases"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/covid19_self_assessment\/pre_existing_diseases\/user_id": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "c88d078a-51d1-4e00-b801-dc70620d84d9"
+                    }
+                ]
+            }
+        ]
+    },
+    "name": [
+        {
+            "value": "Stroke"
+        }
+    ],
+    "created": [
+        {
+            "value": "2020-04-16T07:57:25+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2020-04-16T07:57:25+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ]
+}

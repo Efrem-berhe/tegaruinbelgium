@@ -1,0 +1,31 @@
+{#
+/**
+* @file
+* Default theme implementation to display a block.
+*
+* @see template_preprocess_block()
+*
+* @ingroup themeable
+*/
+#}
+{% set classes = [
+    'clear-both',
+	'coronavirus-counter'
+] %}
+<div{{attributes.addClass(classes)}}>
+	{% for value in content %}
+		<h1>{{value["name"]}}</h1>
+		<div class="cases">
+		<label>{{'Coronavirus Cases'|trans}}:</label>
+			<p class="number">{{value["cases"]}}</p>
+		</div>
+		<div class="deaths">
+			<label>{{'Deaths'|trans}}:</label>
+			<p class="number">{{value["deaths"]}}</p>
+		</div>
+		<div class="recovered">
+			<label>{{'Recovered'|trans}}:</label>
+			<p class="number">{{value["recovered"]}}</p>
+		</div>
+	{% endfor %}
+</div>

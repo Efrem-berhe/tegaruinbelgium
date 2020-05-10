@@ -1,0 +1,152 @@
+<?php
+
+use Drupal\Core\Template\RenderWrapper;
+use Drupal\Core\Template\Attribute;
+use Drupal\search\Form\SearchBlockForm;
+use Drupal\Component\Utility\SafeMarkup;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\system\Form\ThemeSettingsForm;
+use Drupal\file\Entity\File;
+use Drupal\Core\Url;
+use Drupal\file\Plugin\Core\Entity\FileInterface;
+
+/**
+ * @file
+ * Bootstrap sub-theme.
+ *
+ * Place your custom PHP code in this file.
+ */
+
+function yg_charity_preprocess_page(&$variables) {
+  $variables['facebook'] = theme_get_setting('facebook');
+  $variables['twitter'] = theme_get_setting('twitter');
+  $variables['instagram'] = theme_get_setting('instagram');
+  $variables['linkedin'] = theme_get_setting('linkedin');
+  $variables['parallex_content'] = parallex_section();
+
+}
+
+function parallex_section(){
+  $parallex_content = array();
+  $fid = theme_get_setting('background_image');
+  if (isset($fid[0])) {
+    $file = file_load($fid[0]);
+    $uri = $file->getFileUri();
+    $path = file_create_url($uri);
+  }
+  else {
+    $path = base_path() . drupal_get_path('theme', 'yg_charity') . '/images/bg.gif';
+  }
+    $parallex_content[] = "<section id='parallex-section' class='text-center' style='background-image: url(".$path."); background-position:center; background-repeat: no-repeat'>
+  <div class='container'>
+    <div class='row'>
+      <div class='section-title' >
+          <h2>".theme_get_setting('title')."</h2>
+          <div class='title-img'><img src='". base_path() . "/themes/yg_charity/images/line.gif' class='img-responsive' alt='title'></div>
+          <p>".theme_get_setting('description')."</p>
+          <a href=".theme_get_setting('button_link')." class='btn btn-custom'> ".theme_get_setting('button_text')." </a>
+      </div>
+    </div>
+  </div>
+</section>";
+
+return $parallex_content;
+    }
+/**
+ * Implements hook_form_system_theme_settings_alter().
+ */
+function yg_charity_form_system_theme_settings_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+
+//kint(theme_get_setting('footer_content')['value']);
+  $form['yg_charity_settings']['footer'] = array(
+    '#type' => 'details',
+    '#title' => t('Theme Settings'),
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );
+  $form['yg_charity_settings']['footer']['facebook'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Facebook'),
+    '#default_value' => theme_get_setting('facebook'),
+    );
+  $form['yg_charity_settings']['footer']['twitter'] = array(
+  '#type' => 'textfield',
+  '#title' => t('Twitter'),
+   '#default_value' => theme_get_setting('twitter'),
+);
+
+
+  $form['yg_charity_settings']['footer']['instagram'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Instagram'),
+    '#default_value' => theme_get_setting('instagram'),
+  );
+  $form['yg_charity_settings']['footer']['linkedin'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Linkedin'),
+    '#default_value' => theme_get_setting('linkedin'),
+    );
+  $form['parallex_section']['footer'] = array(
+    '#type' => 'details',
+    '#title' => t('Parallex Section'),
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );
+  $form['parallex_section']['footer']['background_image'] = array(
+      '#type' => 'managed_file',
+      '#title' => t('Parallex image'),
+      '#default_value' => theme_get_setting('background_image'),
+      '#upload_location' => 'public://',
+    );
+  $form['parallex_section']['footer']['title'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Title'),
+    '#default_value' => theme_get_setting('title'),
+    );
+  $form['parallex_section']['footer']['description'] = array(
+    '#type' => 'textarea',
+    '#title' => t('Description'),
+    '#default_value' => theme_get_setting('description'),
+    );
+  $form['parallex_section']['footer']['button_text'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Button text'),
+    '#default_value' => theme_get_setting('button_text'),
+    );
+  $form['parallex_section']['footer']['button_link'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Button link'),
+    '#default_value' => theme_get_setting('button_link'),
+    );
+  $form['#submit'][] ='yg_charity_settings_form_submit';
+}
+
+function yg_charity_settings_form_submit(&$form, &$form_state) {
+    $fid = theme_get_setting('background_image');
+    if (!empty($fid)) {
+      $file = file_load($fid[0]);
+      $file->status = FILE_STATUS_PERMANENT;
+      $file->save();
+    }
+  }
+
+
+function yg_charity_preprocess_views_view_fields(&$variables) {
+  $view = $variables['view'];
+  if (($view->storage->id() == 'causes'))  {
+  $variables['raised']=$variables['row']->_entity->get('field_raised')->value;
+  $variables['goal']=$variables['row']->_entity->get('field_goal')->value;
+  $variables['count'] = (round(($variables['raised'] / $variables['goal']) *100));
+  }
+}
+
+
+
+function yg_charity_theme(&$existing, $type, $theme, $path) {
+  $hooks = array();
+  $hooks['user_login_form'] = array(
+      'render element' => 'form',
+      'template' => 'user-login-form',
+  );
+  return $hooks;
+}

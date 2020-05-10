@@ -1,0 +1,4 @@
+services:
+  covid.repository:
+    class: \Drupal\covid\Repository\CovidRepository
+    arguments: ['@database', '@http_client', '@logger.factory', '@datetime.time']

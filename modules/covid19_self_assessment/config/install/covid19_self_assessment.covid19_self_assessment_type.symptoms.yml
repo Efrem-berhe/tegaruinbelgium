@@ -1,0 +1,6 @@
+uuid: fe47d8be-2899-4d03-85de-0230da55836f
+langcode: en
+status: true
+dependencies: {  }
+id: symptoms
+label: Symptoms

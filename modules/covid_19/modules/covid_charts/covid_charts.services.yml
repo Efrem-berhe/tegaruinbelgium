@@ -1,0 +1,4 @@
+services:
+  covid_charts.api_example:
+    class: Drupal\covid_charts\Controller\CovidVisualization
+    arguments: ['@charts.settings', '@messenger', '@uuid']

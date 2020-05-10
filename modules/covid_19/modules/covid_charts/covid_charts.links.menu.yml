@@ -1,0 +1,5 @@
+covid_charts.display:
+  title: 'Covid Geo Reports'
+  description: 'Displays a chart rendered using the API.'
+  parent: system.admin_structure
+  route_name: covid_charts.display

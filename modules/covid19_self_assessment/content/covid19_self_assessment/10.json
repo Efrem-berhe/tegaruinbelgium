@@ -1,0 +1,77 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/admin\/content\/covid19_self_assessment\/10?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/covid19_self_assessment\/additional_symptoms"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/covid19_self_assessment\/additional_symptoms\/user_id": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json"
+            }
+        ]
+    },
+    "id": [
+        {
+            "value": 10
+        }
+    ],
+    "uuid": [
+        {
+            "value": "0a61b273-0fa0-4904-88ba-a5562641807c"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "additional_symptoms"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/covid19_self_assessment\/additional_symptoms\/user_id": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "c88d078a-51d1-4e00-b801-dc70620d84d9"
+                    }
+                ]
+            }
+        ]
+    },
+    "name": [
+        {
+            "value": "Drowsiness"
+        }
+    ],
+    "created": [
+        {
+            "value": "2020-04-16T07:54:29+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2020-04-16T07:54:29+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ]
+}

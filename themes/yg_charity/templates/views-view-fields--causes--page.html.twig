@@ -1,0 +1,14 @@
+<div class="col-md-4 col-sm-6">
+        <div class="causes-grid"> 
+          <div class="causes-img"><img src="{{ fields.field_image.content}}" class="img-responsive" alt="causes"></div>
+          <div class="causes-caption">
+            <h4>{{ fields.title.content}}</h4>
+            <p>{{ fields.body.content }}</p>
+            <div class="progress cause-progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="{{ count }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ count }}%;"></div>
+            </div>
+            <p class="raised"><span style="float:left;"> Raised : ${{fields.field_raised.content}}</span> <span style="float:right;">  Goal : ${{ fields.field_goal.content}}</span></p> 
+            <a href="{{ fields.field_button_link.content}}" class="btn btn-custom"> {{ fields.field_button_text.content}} </a> 
+          </div>
+       </div>  
+      </div>

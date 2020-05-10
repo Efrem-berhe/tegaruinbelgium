@@ -1,0 +1,18 @@
+{%
+  set classes = [
+    'covid19_SA',
+    'risk-' ~ risk|clean_class,
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+    {{ risk|capitalize }} risk
+</div>
+
+<div class="risk-message"> 
+    <h2>Summary</h2>
+    <pre>{{risk_message}}</pre> 
+</div>
+
+<div class="re-assess">
+    <a href="{{ path('covid19_self_assessment.covid19_s_a_form') }}">{{ 'Restart assessment'|t }}</a>
+</div>
